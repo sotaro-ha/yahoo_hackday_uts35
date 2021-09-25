@@ -2,19 +2,19 @@
   <div class="app">
    <header>
      <div class="header_container">
-        <div class="header_logo"><img class="logo_img" src="../assets/logo.png" width="50px"/></div>
+       <router-link to="/"> <div class="header_logo"><img class="logo_img" src="../assets/logo.png" width="50px"/></div></router-link>
         <button class="my_page">My Page</button>
      </div>
    </header>
    <div class="content_container">
-  <router-link to ="/shops/1"><div class="content_panel"><div class="shop_image"></div><div class="shop_text"><p class="shop_title">おにぎり</p><p class="shop_price">70円</p><p class="shop_percent">40%引き！</p></div></div></router-link>
-   <router-link to ="/shops/2"><div class="content_panel"><div class="shop_image"></div><div class="shop_text"><p class="shop_title">おにぎり</p><p class="shop_price">70円</p><p class="shop_percent">40%引き！</p></div></div></router-link>
-   <router-link to ="/shops/3"><div class="content_panel"><div class="shop_image"></div><div class="shop_text"><p class="shop_title">おにぎり</p><p class="shop_price">70円</p><p class="shop_percent">40%引き！</p></div></div></router-link>
-  <router-link to ="/shops/4"> <div class="content_panel"><div class="shop_image"></div><div class="shop_text"><p class="shop_title">おにぎり</p><p class="shop_price">70円</p><p class="shop_percent">40%引き！</p></div></div></router-link>
-  <router-link to ="/shops/5"> <div class="content_panel"><div class="shop_image"></div><div class="shop_text"><p class="shop_title">おにぎり</p><p class="shop_price">70円</p><p class="shop_percent">40%引き！</p></div></div></router-link>
-  <router-link to ="/shops/6"> <div class="content_panel"><div class="shop_image"></div><div class="shop_text"><p class="shop_title">おにぎり</p><p class="shop_price">70円</p><p class="shop_percent">40%引き！</p></div></div></router-link>
-  <router-link to ="/shops/7"> <div class="content_panel"><div class="shop_image"></div><div class="shop_text"><p class="shop_title">おにぎり</p><p class="shop_price">70円</p><p class="shop_percent">40%引き！</p></div></div></router-link>
-  <router-link to ="/shops/8"> <div class="content_panel"><div class="shop_image"></div><div class="shop_text"><p class="shop_title">おにぎり</p><p class="shop_price">70円</p><p class="shop_percent">40%引き！</p></div></div></router-link>
+  <router-link to ="/shops/1"><div class="content_panel "><div class="shop_image img1"></div><div class="shop_text"><p class="shop_title">おにぎり</p><p class="shop_price">70円</p><p class="shop_percent">40%引き！</p></div></div></router-link>
+   <router-link to ="/shops/2"><div class="content_panel"><div class="shop_image img2"></div><div class="shop_text"><p class="shop_title">お弁当</p><p class="shop_price">300円</p><p class="shop_percent">30%引き！</p></div></div></router-link>
+   <router-link to ="/shops/3"><div class="content_panel"><div class="shop_image img3"></div><div class="shop_text"><p class="shop_title">煮物</p><p class="shop_price">300円</p><p class="shop_percent">40%引き！</p></div></div></router-link>
+  <router-link to ="/shops/4"> <div class="content_panel"><div class="shop_image img4"></div><div class="shop_text"><p class="shop_title">ハンバーガー</p><p class="shop_price">200円</p><p class="shop_percent">40%引き！</p></div></div></router-link>
+  <router-link to ="/shops/5"> <div class="content_panel"><div class="shop_image img5"></div><div class="shop_text"><p class="shop_title">唐揚げくん</p><p class="shop_price">150円</p><p class="shop_percent">20%引き！</p></div></div></router-link>
+  <router-link to ="/shops/6"> <div class="content_panel"><div class="shop_image img6"></div><div class="shop_text"><p class="shop_title">お弁当</p><p class="shop_price">300円</p><p class="shop_percent">40%引き！</p></div></div></router-link>
+  <router-link to ="/shops/7"> <div class="content_panel"><div class="shop_image img7"></div><div class="shop_text"><p class="shop_title">日の丸弁当</p><p class="shop_price">300円</p><p class="shop_percent">10%引き！</p></div></div></router-link>
+  <router-link to ="/shops/8"> <div class="content_panel"><div class="shop_image img8"></div><div class="shop_text"><p class="shop_title">野菜カレー</p><p class="shop_price">400円</p><p class="shop_percent">40%引き！</p></div></div></router-link>
    </div>
   </div>
 </template>
@@ -37,6 +37,7 @@ header{
   height :70px;
   background-color: rgb(255, 221, 110);
   width:100%;
+  filter:drop-shadow(0px 3px 3px rgba(0,0,0,0.3));
 }
 .header_container{
   max-width:1200px;
@@ -81,7 +82,6 @@ cursor:pointer;
 }
 .shop_image{
   background-color:white;
-  background-image:url("../assets/onigiri_maru.png");
   background-size:contain;
   background-repeat: no-repeat;
   width:200px;
@@ -112,6 +112,32 @@ cursor:pointer;
   margin-left:16px;
   color:rgb(209, 0, 0);
 }
-
+a:visited{
+  text-decoration: none;
+}
+.img1{
+background-image:url("../assets/onigiri_maru.png")
+}
+.img2{
+  background-image:url("../assets/food_obentou.png")
+}
+.img3{
+  background-image:url("../assets/food_yasai_nimono.png")
+}
+.img4{
+  background-image:url("../assets/hamburger_meat_sauce.png")
+}
+.img5{
+  background-image:url("../assets/karaagekun.png")
+}
+.img6{
+  background-image:url("../assets/obentou_hamburg.png")
+}
+.img7{
+  background-image:url("../assets/obentou_hinomaru.png")
+}
+.img8{
+  background-image:url("../assets/vegetable_curry.png")
+}
 
 </style>
