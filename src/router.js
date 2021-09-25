@@ -10,7 +10,6 @@ import Shop5 from './views/Shop5.vue'
 import Shop6 from './views/Shop6.vue'
 import Shop7 from './views/Shop7.vue'
 import Shop8 from './views/Shop8.vue'
-import Api from "./views/api.vue"
 
 Vue.use(Router)
 
@@ -69,10 +68,6 @@ export default new Router({
         name: 'shop-8',
         component: Shop8
     },
-    {
-        path: '/api',
-        name: 'api',
-        component: Api
-    },
+   
   ]
 })
