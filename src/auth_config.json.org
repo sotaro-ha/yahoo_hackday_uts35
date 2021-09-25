@@ -1,0 +1,5 @@
+{
+  "domain": "store-auth.monet-technologies.co.jp",
+  "clientId": "your client id",
+  "audience": "https://odb-api.monet-technologies.co.jp"
+}
