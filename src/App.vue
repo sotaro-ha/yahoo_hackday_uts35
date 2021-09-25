@@ -1,19 +1,8 @@
 <template>
-  <div id="app">
-    <HelloWorld msg="hey to Your Vue.js App"/>
+   <div id="app">
+    <router-view />
   </div>
 </template>
-
-<script>
-import HelloWorld from './components/mainPage.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
 <style>
 #app {
@@ -22,7 +11,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin:0;
-  
 }
 </style>
