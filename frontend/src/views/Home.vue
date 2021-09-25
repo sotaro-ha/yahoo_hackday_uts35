@@ -3,7 +3,18 @@
    <header>
      <div class="header_container">
        <router-link to="/"> <div class="header_logo"><img class="logo_img" src="../assets/logo.png" width="50px"/></div></router-link>
-        <button class="my_page">My Page</button>
+
+       <!-- Check that the SDK client is not currently loading before accessing is methods -->
+    <div v-if="!$auth.loading">
+      <!-- show login when not authenticated -->
+      <button v-if="!$auth.isAuthenticated" @click="login">Log in</button>
+      <!-- show logout when authenticated -->
+      <div v-if="$auth.isAuthenticated">
+        <button @click="logout">Log out</button>
+        <p class="left"> username:{{ $auth.user.name }}</p>
+      </div>
+    </div>
+
      </div>
    </header>
    <div class="content_container">
@@ -24,9 +35,24 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  methods: {
+    // Log the user in
+    login() {
+      this.$auth.loginWithRedirect();
+    },
+    // Log the user out
+    logout() {
+      this.$auth.logout({
+        returnTo: window.location.origin
+      });
+    }
   }
+  
 }
 </script>
+
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -46,7 +72,7 @@ header{
   align-items: center;
    padding:10px;
 }
-.my_page{
+.log_in{
   width:100px;
   height:40px;
   background:#ffffff;
@@ -55,7 +81,7 @@ header{
   border:none;
   cursor:pointer;
 }
-.my_page:hover{
+.log_in:hover{
   filter:drop-shadow(0px 0px 5px rgba(0,0,0,0.1));
   transition: all .1s ease-in;
 }
