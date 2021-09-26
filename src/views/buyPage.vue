@@ -6,20 +6,12 @@
         <button class="my_page">My Page</button>
      </div>
    </header>
-    <div class="main_background">
-      <h2 class="title">おにぎり</h2>
-      <p>このおにぎりは、○□△コンビニのご飯です！</p>
-      <div class="img_box"><img src="../assets/onigiri_maru.png" alt=""></div>
-      <div class="price_box">
-      <p class="price">70円</p>
-      <div class="percent">40%引き！</div>
-      </div>
-      <p>消費期限:2021/9/26</p>
-      <p>○□△コンビニHOGEHOGE店より発送</p>
-      <p>Foo分以内に到着</p>
-    <router-link to ="/buypage"><button class="buy_button">購入はこちら</button></router-link>
-    <router-link to="/"><p>ホームに戻る</p></router-link>
-    </div>
+   <div class="page_background">
+       <h2>ご購入ありがとうございました</h2>
+   </div>
+   <p>ドライバーの現在地(イメージ)</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8951196043663!2d139.73470871499651!3d35.679584380194655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b7897bf41df%3A0x7b4b471810cbba59!2z44Ok44OV44O844ixIEdOQk5FVOmWi-eZuumBi-WWtuODgeODvOODoA!5e0!3m2!1sja!2sjp!4v1632621501371!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <p>あと△分で到着します</p>
   </div>
 </template>
 
@@ -27,7 +19,10 @@
 export default {
   name: 'Shop1'
 }
+
+
 </script>
+
 <style scoped>
 header{
   height :70px;
@@ -47,6 +42,9 @@ body{
 }
 .title{
   margin:16px;
+}
+h2{
+    margin:16px;
 }
 .my_page{
   width:100px;

@@ -11,6 +11,7 @@ import Shop6 from './views/Shop6.vue'
 import Shop7 from './views/Shop7.vue'
 import Shop8 from './views/Shop8.vue'
 import Api from './views/api.vue'
+import buyPage from "./views/buyPage.vue"
 
 Vue.use(Router)
 
@@ -74,5 +75,10 @@ export default new Router({
       name: 'api',
       component: Api
   },
+  {
+    path: '/buypage',
+    name: 'api',
+    component: buyPage
+},
   ]
 })
