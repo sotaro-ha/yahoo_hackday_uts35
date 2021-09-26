@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-
+import axios from 'axios'
+import VueAxios from "vue-axios"
 // ルーティングのために追加
 import router from './router'
 
@@ -18,6 +19,7 @@ Vue.use(Auth0Plugin, {
   clientId,
   audience
 });
+Vue.use(VueAxios, axios)
 
 new Vue({
   router, 
